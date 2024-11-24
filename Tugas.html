@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakultas Ilmu Komputer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .prodi {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .prodi:hover {
+            background-color: #e0f7fa;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#program-studi">Program Studi</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="search" class="search-input" placeholder="Cari Program Studi..." onkeyup="filterProdi()">
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Selamat datang di Fakultas Ilmu Komputer</h1>
+        <p>Fakultas Ilmu Komputer menawarkan berbagai program studi dalam bidang teknologi dan informatika.</p>
+    </section>
+
+    <section id="tentang">
+        <h2>Visi Fakultas Ilmu Komputer</h2>
+        <p>“Terwujudnya Fakultas Ilmu Komputer Universitas Kuningan sebagai fakultas andal yang unggul dalam penyelenggaraan Tri Darma Perguruan Tinggi di Wilayah Jawa Barat pada tahun 2032“</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+            <li>Menyelenggarakan pendidikan, penelitian, dan pengabdian pada masyarakat secara terpadu berdasarkan pada kaidah-kaidah pendidikan modern.</li>
+            <li>Membina dan mengembangkan kehidupan akademik yang sehat sesuai dengan nilai-nilai dan norma-norma yang berkembang di dunia akademik.</li>
+            <li>Menyelenggarakan riset-riset ilmiah yang tidak saja mampu mendorong pertumbuhan ilmu dan teknologi lagi juga dapat menjamin kebutuhan dunia industri dan bisnis yang berkembang sangat pesat dewasa ini.</li>
+            <li>Menjadi sarana terjadinya pertemuan-pertemuan ilmiah baik lingkup lokal maupun nasional sehingga dapat memberikan warna dan kontribusi yang nyata dalam kemajuan ilmu dan teknologi.</li>
+            <li>Melayani, memandu, dan menyatu dengan masyarakat dalam upaya ikut serta mewujudkan masyarakat baru Indonesia yang adil dan makmur.</li>
+            <li>Menjadi sarana penggodokan generasi muda sehingga mampu mandiri, profesional, dan berakhlak mulia yang bermanfaat bagi dirinya, masyarakat, bangsa, dan negara.</li>
+            <li>Meningkatkan budaya baca dalam upaya mewujudkan generasi yang memiliki wawasan yang luas dalam bidang IPTEK sesuai dengan minat kajiannya.</li>
+        </ul>
+    </section>
+
+    <section id="program-studi">
+        <h2>Program Studi</h2>
+
+        <div class="prodi" data-nama="Sistem Informasi S1">
+            <h3>Program Studi Sistem Informasi S1</h3>
+            <p><strong>Visi:</strong> “Terwujudnya program studi system informasi sebagai program studi yang handal dan unggul dalam penyelenggaraan Tri Darma Perguruan Tinggi unggul di bidang rekayas asistem informasi di Wilayah Jawa Barat pada tahun 2032”.</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+                <li>Menyelenggarakan pendidikan berbasis sistem informasi sesuai dengan dinamika kebutuhan masyarakat.</li>
+                <li>Melaksanakan penelitian dan pengabdian pada masyarakat dalam bidang sistem informasi.</li>
+                <li>Mengembangkan kehidupan akademik yang sehat sesuai dengan nilai-nilai  dan norma-norma yang berkembang  di dunia akademik.</li>
+                <li>Menjalin kerjasama secara institusional dengan lembaga lain di bidang sistem informasi untuk pengembangan dan pemberdayaan program studi.</li>
+                <li>Ikut serta memberdayakan masyarakat.</li>
+            </ul>
+        </div>
+
+        <div class="prodi" data-nama="Teknik Informatika S1">
+            <h3>Program Studi Teknik Informatika S1</h3>
+            <p><strong>Visi:</strong> "Terwujudnya program studi yang handal dan unggul dibidang teknologi informasi yang memiliki standar kompetensi dan menghasilkan tenaga-tenaga ahli IT yang cerdas dan berbudi luhur di wilayah Jawa Barat pada tahun 2032”</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+                <li>Menyelenggarakan pendidikan bermutu tinggi dibidang Teknik Informatika bagi masyarakat sebagai sarana untuk menghasilkan lulusan yang bermoral, berkualitas, profesional, kompeten, sesuai dengan kebutuhan standar industri, profesi dan perkembangan ilmu pengetahuan dan teknologi saat ini dan yang akan datang.</li>
+                <li>Memenuhi kebutuhan masyarakat melalui pengenalan, pengalihan dan penyebaran ilmu pengetahuan dan teknologi yang relevan dengan ilmu teknik informatika untuk mencapai kualitas standar program studi dengan berfokus pada integrasi teknologi informasi dalam setiap aspek kehidupan manusia.</li>
+                <li>Menemukan, mengembangkan dan menciptakan karya di bidang informatika serta menyebarkan ilmu pengetahuan dan teknologi demi kepekaan dan kepedulian terhadap kehidupan masyarakat.</li>
+                <li>Menggalang penelitian untuk berperan aktif dalam peningkatan kemajuan ilmu pengetahuan dan teknologi, khususnya bidang informatika.</li>
+                <li>Menumbuhkan budaya diskusi dalam pelaksanaan Tri Dharma perguruan Tinggi.</li>
+            </ul>
+        </div>
+
+        <div class="prodi" data-nama="Desain Komunikasi Visual S1">
+            <h3>Program Studi Desain Komunikasi Visual S1</h3>
+            <p><strong>Visi:</strong> “Menjadi program studi desain komunikasi visual yang unggul dalam bidang industri multimedia, periklanan dan grafis yang berbasis teknologi informasi dan memiliki komitmen yang tinggi terhadap pemberdayaan masyarakat tahun 2032”</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+                <li>Mengembangkan dan mengimplementasikan pendidikan Desain Komunikasi Visual berbasis teknologi informasi di bidang industri multimedia, periklanan dan desain grafis, yang kreatif serta dapat terintegrasi secara keilmuan dengan disiplin ilmu lain.</li>
+                <li>Mengembangkan penelitian dan pengabdian masyarakat, sebagai bagian dari pengembangan keilmuan yang mempunyai nilai kebaruan yang bermanfaat bagi kebutuhan industri dan masyarakat.</li>
+            </ul>
+        </div>
+
+        <div class="prodi" data-nama="Manajemen Informatika D3">
+            <h3>Program Studi Manajemen Informatika D3</h3>
+            <p><strong>Visi:</strong> “Mewujudkan program studi yang unggul dalam bidang teknologi informasi dan komunikasi dan bermutu berbasis entrepreneurship yang diseleraskan dengan perkembangan teknologi informasi dan komunikasi serta memiliki komitmen yang tinggi terhadap pemberdayaan masyarakat pada tahun 2032”</p>
+            <p><strong>Misi:</strong></p>
+            <ul>
+                <li>Menyelenggarakan pendidikan, penelitian, dan pengabdian pada masyarakat khususnya dalam penerapan teknologi informasi.</li>
+                <li>Memberi bekal pengetahuan teori dan praktek kepada peserta didik agar memiliki kompetensi yang tinggi dalam bidang pemrograman-pemrograman aplikasi untuk pemanfaatn sistem informasi.</li>
+                <li>Menyelenggarakan riset-riset ilmiah dibidang teknologi informasi pada dunia pendidikan, industri, bisnis dan akuntansi yang senantiasa berkembang dengan sangat pesat.</li>
+                <li>Menjadi sarana terjadinya pertemuan-pertemuan ilmiah baik lingkup lokal, nasional sehingga dapat memberikan kontribusi yang nyata dalam kemajuan teknologi informasi.</li>
+                <li>Melayani, memandu, dan menyatu dengan masyarakat dalam upaya ikut serta mewujudkan masyarakat baru Indonesia yang berwawasan luas, dinamis, dan modern.</li>
+                <li>Menjadi sarana penggodokan peserta didik sehingga menghasilkan tenaga-tenaga ahli yang mempunyai kompetensi yang tinggi dalam bidang pemrograman-pemrograman aplikasi untuk sistem informasi, kreatif, inovatif, mandiri, profesional, dan mampu bersaing dipasar global dengan para lulusan perguruan tinggi lain yang lebih terkemuka di indonesia, serta berakhlak mulia yang bermanfaat bagi dirinya, masyarakat, bangsa, dan negara.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy Fakultas Ilmu Komputer 2024</p>
+    </footer>
+
+    <script>
+        function filterProdi() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const prodiSections = document.querySelectorAll('.prodi');
+
+            prodiSections.forEach(prodi => {
+                const prodiName = prodi.getAttribute('data-nama').toLowerCase();
+                if (prodiName.includes(searchInput)) {
+                    prodi.style.display = '';
+                } else {
+                    prodi.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
